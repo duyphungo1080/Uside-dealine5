@@ -101,11 +101,13 @@ main {
     cursor: pointer;
 }
 
+/* KHỐI MAIN CHÍNH */
 .main {
     background-color: #fff;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    gap: 32px; /* Chuẩn 32px giữa ảnh -> content -> form -> email */
 }
 
 .main > img {
@@ -113,10 +115,11 @@ main {
     height: 100px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    display: block; /* Tránh khoảng hở thừa dưới ảnh của thẻ img */
 }
 
 .content {
-    margin: 32px 32px 0 32px;
+    padding: 0 32px; /* Dùng padding trái/phải thay cho margin để không đè khoảng cách gap */
     display: flex;
     gap: 24px;
 }
@@ -150,7 +153,7 @@ main {
 }
 
 form {
-    margin: 25px 32px 0 32px;
+    padding: 0 32px;
     display: flex;
     flex-wrap: wrap;
     column-gap: 32px;
@@ -179,7 +182,7 @@ form {
 .email {
     display: flex;
     flex-direction: column;
-    margin: 25px 32px 32px 32px;
+    padding: 0 32px 32px 32px;
     row-gap: 20px;
 }
 
